@@ -104,9 +104,16 @@ h1 {
     font-weight: 500;
 }
 
-.input-group input {
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group input,
+.input-with-icon input {
     width: 100%;
-    padding: 14px 18px;
+    padding: 14px 50px 14px 18px;
     background: var(--bg-input);
     border: 2px solid transparent;
     border-radius: 12px;
@@ -114,6 +121,24 @@ h1 {
     font-size: 16px;
     transition: all 0.3s ease;
     outline: none;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--primary-green);
 }
 
 .input-group input:focus {
@@ -171,6 +196,28 @@ h1 {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-10px); }
     75% { transform: translateX(10px); }
+}
+
+/* Reset section */
+.reset-section {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.btn-reset {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+}
+
+.btn-reset:hover {
+    color: var(--primary-green);
 }
 
 /* Responsive design */
