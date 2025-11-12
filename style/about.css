@@ -259,6 +259,24 @@ body {
     font-size: 18px;
 }
 
+/* Privacy Highlights */
+.privacy-highlight {
+    color: #ff4444;
+    font-weight: 600;
+}
+
+.privacy-note {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 68, 68, 0.1);
+    border-left: 3px solid #ff4444;
+    border-radius: 8px;
+}
+
+.privacy-note strong {
+    color: #ff4444;
+}
+
 /* Developer Section */
 .developer-section {
     text-align: center;

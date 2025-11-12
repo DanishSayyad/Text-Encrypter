@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Encrypter Decrypter</title>
+    <title>About - Secret Encrypter</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/icon-small.svg">
     <link rel="stylesheet" href="../style/about.css">
 </head>
 <body>
@@ -15,9 +16,9 @@
                     <path d="M30 15 L30 25 M30 35 L30 45 M20 30 L25 30 M35 30 L40 30" stroke="#00ff88" stroke-width="3" stroke-linecap="round"/>
                     <circle cx="30" cy="30" r="5" fill="#00ff88"/>
                 </svg>
-                <span>Encrypter Decrypter</span>
+                <span>Secret Encrypter</span>
             </div>
-            <a href="../index.html" class="btn-back">Back to Home</a>
+            <a href="home.html" class="btn-back">Back to Home</a>
         </div>
     </nav>
 
@@ -29,8 +30,8 @@
 
         <div class="content-card">
             <div class="section">
-                <h2>What is Encrypter Decrypter?</h2>
-                <p>Encrypter Decrypter is a web-based application that allows you to securely encrypt and decrypt text using custom encryption keys. All operations happen entirely in your browser, ensuring complete privacy and security.</p>
+                <h2>What is Secret Encrypter?</h2>
+                <p>Secret Encrypter is a web-based application that allows you to securely encrypt and decrypt text using custom encryption keys. All operations happen entirely in your browser, ensuring complete privacy and security.</p>
             </div>
 
             <div class="section">
@@ -40,7 +41,7 @@
                         <span class="feature-icon">✓</span>
                         <div>
                             <strong>Client-Side Processing</strong>
-                            <p>All encryption and decryption happens in your browser. No data is sent to any server.</p>
+                            <p>All encryption and decryption happens in your browser. <span class="privacy-highlight">No data is sent to any server.</span></p>
                         </div>
                     </li>
                     <li>
@@ -54,7 +55,7 @@
                         <span class="feature-icon">✓</span>
                         <div>
                             <strong>Password Protection</strong>
-                            <p>Access to the application is protected by SHA-256 hashed passwords stored locally.</p>
+                            <p>Access to the application is protected by SHA-256 hashed passwords <span class="privacy-highlight">stored only in your browser's local storage.</span></p>
                         </div>
                     </li>
                     <li>
@@ -82,11 +83,12 @@
                 <h2>Privacy & Security</h2>
                 <p>Your privacy is paramount. This application:</p>
                 <ul class="simple-list">
-                    <li>Does not collect any personal information</li>
-                    <li>Does not transmit data to external servers</li>
-                    <li>Stores only hashed passwords in browser local storage</li>
-                    <li>Runs entirely offline after initial page load</li>
+                    <li><span class="privacy-highlight">Does not collect any personal information</span></li>
+                    <li><span class="privacy-highlight">Does not transmit data to external servers</span></li>
+                    <li><span class="privacy-highlight">Stores only hashed passwords in browser local storage</span></li>
+                    <li><span class="privacy-highlight">Runs entirely offline after initial page load</span></li>
                 </ul>
+                <p class="privacy-note"><strong>Important:</strong> <span class="privacy-highlight">We do not store any content you provide on our servers. Everything is stored only in your browser's local storage.</span></p>
             </div>
 
             <div class="section developer-section">

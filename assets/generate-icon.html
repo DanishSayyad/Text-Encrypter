@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Icon Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="512" height="512"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Background
+        ctx.fillStyle = '#0a1f1a';
+        ctx.beginPath();
+        ctx.arc(256, 256, 256, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Outer glow
+        ctx.strokeStyle = '#00ff88';
+        ctx.globalAlpha = 0.3;
+        ctx.lineWidth = 8;
+        ctx.beginPath();
+        ctx.arc(256, 256, 220, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+        
+        // Lock body
+        ctx.fillStyle = '#0f2d24';
+        ctx.strokeStyle = '#00ff88';
+        ctx.lineWidth = 6;
+        ctx.beginPath();
+        ctx.roundRect(180, 240, 152, 140, 15);
+        ctx.fill();
+        ctx.stroke();
+        
+        // Lock shackle
+        ctx.strokeStyle = '#00ff88';
+        ctx.lineWidth = 12;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.moveTo(200, 240);
+        ctx.lineTo(200, 180);
+        ctx.quadraticCurveTo(200, 130, 256, 130);
+        ctx.quadraticCurveTo(312, 130, 312, 180);
+        ctx.lineTo(312, 240);
+        ctx.stroke();
+        
+        // Keyhole circle
+        ctx.fillStyle = '#00ff88';
+        ctx.beginPath();
+        ctx.arc(256, 290, 18, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Keyhole slot
+        ctx.beginPath();
+        ctx.roundRect(246, 290, 20, 45, 3);
+        ctx.fill();
+        
+        // Decorative lines
+        ctx.strokeStyle = '#00ff88';
+        ctx.lineWidth = 3;
+        ctx.globalAlpha = 0.6;
+        
+        // Left side
+        ctx.beginPath(); ctx.moveTo(210, 270); ctx.lineTo(230, 270); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(210, 320); ctx.lineTo(230, 320); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(210, 350); ctx.lineTo(230, 350); ctx.stroke();
+        
+        // Right side
+        ctx.beginPath(); ctx.moveTo(282, 270); ctx.lineTo(302, 270); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(282, 320); ctx.lineTo(302, 320); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(282, 350); ctx.lineTo(302, 350); ctx.stroke();
+        
+        ctx.globalAlpha = 1;
+        
+        // Binary text
+        ctx.globalAlpha = 0.5;
+        ctx.fillStyle = '#00ff88';
+        ctx.font = '28px monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText('01001', 256, 430);
+        ctx.globalAlpha = 1;
+        
+        // Glow ring
+        ctx.strokeStyle = '#00ff88';
+        ctx.lineWidth = 2;
+        ctx.globalAlpha = 0.2;
+        ctx.beginPath();
+        ctx.arc(256, 256, 200, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+        
+        // Corner accents
+        ctx.strokeStyle = '#00ff88';
+        ctx.lineWidth = 4;
+        ctx.globalAlpha = 0.4;
+        
+        // Top left
+        ctx.beginPath(); ctx.moveTo(150, 150); ctx.lineTo(130, 150); ctx.lineTo(130, 130); ctx.stroke();
+        // Top right
+        ctx.beginPath(); ctx.moveTo(362, 150); ctx.lineTo(382, 150); ctx.lineTo(382, 130); ctx.stroke();
+        // Bottom left
+        ctx.beginPath(); ctx.moveTo(150, 362); ctx.lineTo(130, 362); ctx.lineTo(130, 382); ctx.stroke();
+        // Bottom right
+        ctx.beginPath(); ctx.moveTo(362, 362); ctx.lineTo(382, 362); ctx.lineTo(382, 382); ctx.stroke();
+        
+        ctx.globalAlpha = 1;
+        
+        // Download
+        setTimeout(() => {
+            canvas.toBlob(blob => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'icon.png';
+                a.click();
+            });
+        }, 100);
+    </script>
+</body>
+</html>
