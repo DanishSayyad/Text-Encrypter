@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Encrypter Decrypter</title>
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="28" stroke="#00ff88" stroke-width="3"/>
+                    <path d="M30 15 L30 25 M30 35 L30 45 M20 30 L25 30 M35 30 L40 30" stroke="#00ff88" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="30" cy="30" r="5" fill="#00ff88"/>
+                </svg>
+                <span>Encrypter Decrypter</span>
+            </div>
+            <button class="btn-logout" id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome Back!</h1>
+            <p class="subtitle">Your secure encryption and decryption tool</p>
+        </div>
+
+        <div class="main-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Encrypt Text</h2>
+                </div>
+                <div class="card-body">
+                    <textarea id="encryptInput" placeholder="Enter text to encrypt..." rows="5"></textarea>
+                    <button class="btn-primary" id="encryptBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        Encrypt
+                    </button>
+                    <div class="output" id="encryptOutput"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Decrypt Text</h2>
+                </div>
+                <div class="card-body">
+                    <textarea id="decryptInput" placeholder="Enter text to decrypt..." rows="5"></textarea>
+                    <button class="btn-primary" id="decryptBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
+                        </svg>
+                        Decrypt
+                    </button>
+                    <div class="output" id="decryptOutput"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-card">
+                <h3>🔒 Secure Storage</h3>
+                <p>Your password is hashed and stored securely in the browser</p>
+            </div>
+            <div class="info-card">
+                <h3>🚀 Fast & Easy</h3>
+                <p>Encrypt and decrypt text with just a few clicks</p>
+            </div>
+            <div class="info-card">
+                <h3>🎯 Privacy First</h3>
+                <p>Everything happens locally in your browser</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/auth.js"></script>
+    <script src="../script/app.js"></script>
+</body>
+</html>
